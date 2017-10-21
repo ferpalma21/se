@@ -16,7 +16,10 @@ function registerStudent(){
   //check if all info is in
   if(student.code == "" || student.name == "" || student.calif == ""){
   checkEmpty(student);
+  return;
 }else{
+  //if has an error in red change it to white
+  blank(student);
   //adding student
   studentList.push(student);
   //showing students
@@ -24,32 +27,61 @@ function registerStudent(){
   return studentList;
 }
 }
-//blanked the inputs
-// function blank(student){
-//   if (student.code !== "") {
-//     document.getElementById('code').style.background = "white";
-//   }
-//   if (student.name !== "") {
-//     document.getElementById('name').style.background = "white";
-//   }
-//   if (student.calif) {
-//     document.getElementById('calif').style.background = "white";
-//   }
-// }
+//whiteColor
+function blank(student){
+var html = "";
+  if (student.code !== "") {
+    //input white
+    document.getElementById('code').style.background = "white";
+    //disappear any flash if there was
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'white';
+    document.getElementById('average').style.color = '#f98b33';
+  }
+  if (student.name !== "") {
+    //input white
+    document.getElementById('name').style.background = "white";
+    //disappear any flash if there was
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'white';
+    document.getElementById('average').style.color = '#f98b33';
+  }
+  if (student.calif) {
+    //input white
+    document.getElementById('calif').style.background = "white";
+    //disappear any flash if there was
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'white';
+    document.getElementById('average').style.color = '#f98b33';
+  }
+}
 
 //checking empty info
 function checkEmpty(student){
+  var html ;
   if(student.code == ""){
     document.getElementById('code').style.background = "red";
-    return console.log("error");
+    html = "Por favor rellene todos los campos";
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'red';
+    document.getElementById('average').style.color = 'white';
+    console.log("error");
   }
   if (student.name === '') {
     document.getElementById('name').style.background = "red";
-    return console.log("error");
+    html = "Por favor rellene todos los campos";
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'red';
+    document.getElementById('average').style.color = 'white';
+    console.log("error");
   }
   if (student.calif === '') {
     document.getElementById('calif').style.background = "red";
-    return console.log("error");
+    html = "Por favor rellene todos los campos";
+    document.getElementById('average').innerHTML = html;
+    document.getElementById('average').style.background = 'red';
+    document.getElementById('average').style.color = 'white';
+    console.log("error");
   }
 }
 
@@ -90,8 +122,8 @@ function average(){
   }
   var avg = sum/studentList.length;
 
-  html = '<h3>El promedio del grupo es ';
-  html += '<strong>'+ avg + '</strong>';
+  html = 'El promedio del grupo es ';
+  html += avg;
 
   alert(html);
 
@@ -153,6 +185,16 @@ function lowestGrade(){
 //Adding listeners
 function btnFunction(){
   var register = document.getElementById("btn-register");
-  console.log(register);
   register.addEventListener("click", registerStudent, true);
+
+  var averageAll = document.getElementById("btn-average");
+  averageAll.addEventListener('click', average);
+
+  var highest = document.getElementById('btn-highest');
+  highest.addEventListener('click', highestGrade);
+
+  var lowest = document.getElementById('btn-lowest');
+  lowest.addEventListener('click', lowestGrade);
 }
+
+btnFunction();

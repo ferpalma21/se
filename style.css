@@ -12,6 +12,7 @@
   padding: 0px;
 }
 .btn{
+  color: white;
   float: left;
   display: inline-flex;
   background-color: #f98b33;
@@ -25,10 +26,7 @@
   position: absolute;
   left: 15%;
 }
-#btn-average{
-  text-align: center;
-  left: 50%;
-}
+
 .student-list{
   float: left;
   position: absolute;
@@ -52,6 +50,8 @@ th{
   top: 50px;
   border: 1px solid #fda215;
   color: #f98b33;
+  font-weight: 400;
+  border-radius: 10px;
 }
 #highest-grade{
   position: absolute;
