@@ -1,0 +1,81 @@
+.form{
+  margin: 0px;
+  padding: 0px;
+}
+.title{
+  margin:0px;
+  padding: 2px;
+  text-align: left;
+}
+.bForm{
+  margin: 0px;
+  padding: 0px;
+}
+.btn{
+  float: left;
+  display: inline-flex;
+  background-color: #f98b33;
+  border-radius: 25%;
+  text-align: center;
+  width: 80px;
+ height: 35px;
+ margin: 10px;
+}
+.list{
+  position: absolute;
+  left: 15%;
+}
+#btn-average{
+  text-align: center;
+  left: 50%;
+}
+.student-list{
+  float: left;
+  position: absolute;
+  top: 300px;
+  margin: 20px;
+}
+tr, th, td{
+  padding: 10px;
+  padding-right: 15px;
+}
+th{
+  color: #ba23a4;
+}
+#average{
+  position: absolute;
+  display: inline-block;
+  float: left;
+  width: 120px;
+  font-family: monospace;
+  right: 500px;
+  top: 50px;
+  border: 1px solid #fda215;
+  color: #f98b33;
+}
+#highest-grade{
+  position: absolute;
+  display: inline-block;
+  font-family: monospace;
+  float: left;
+  width: 120px;
+  right: 300px;
+  top: 50px;
+  border: 1px solid #fda215;
+  color: #f98b33;
+}
+#lowest-grade{
+  position: absolute;
+  display: inline-block;
+  font-family: monospace;
+  float: left;
+  width: 120px;
+  right: 100px;
+  border: 1px solid #fda215;
+  top: 50px;
+  color: #f98b33;
+}
+.results{
+  display: inline-table;
+
+}

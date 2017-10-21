@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Segundo Proyecto</title>
+    <script type="text/javascript" src="js.js">
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Registro de Estudiante</h1>
+
+    <div class="bForm">
+      <form name="formStudent" enctype='application/json' action="index.html" method="post">
+        <p class="code title">Código: <br><input type="text" id="code" name="code"  required value=""></p>
+        <p class="name title">Nombre: <br><input type="text" id="name"  name="name" required value=""></p>
+        <p class="calif title">Nota: <br><input type="number" id="calif"  name="calif" required value=""></p>
+
+    </div>
+    <br>
+      <button class="btn" type="button" id="btn-register" onclick="registerStudent()" >Registrar</button>
+      <button class="btn" type="button" id="btn-average" >Promedio</button>
+      <button class="btn" type="button" id="highest-calif" >Nota mayor</button>
+      <button class="btn" type="button" id="lowest" onclick="lowestGrade()" >Nota menor</button>
+    </div>
+    </form>
+    <h3 id="average" class="results"></h3>
+    <h3 id="highest-grade" class="results"></h3>
+    <h3 id="lowest-grade" class="results"></h3>
+<br><br>
+      <h3 class="list">Lista</h3>
+      <table>
+      <div id="listing">
+
+      </div>
+
+  </body>
+</html>
